@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import json
-import dj_database_url
+import jsonl
 from os import environ
 
 
@@ -93,6 +92,13 @@ WSGI_APPLICATION = 'iori_register.wsgi.application'
 #    DATABASES = {"default": dj_database_url.parse(db_url)}
 # else:
 #    DATABASES = {"default": dj_database_url.parse("sqlite:///db.sqlite3")}
+
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+# }
 
 DATABASES = {
     'default': {
